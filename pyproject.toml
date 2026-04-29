@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "resolution-week4-xrime"
+version = "0.1.0"
+description = "Food Spots API with Auth and Rate Limiting"
+dependencies = [
+    "fastapi[standard]",
+    "slowapi"
+]
+
+[project.scripts]
+# This tells Python: find 'main.py' inside the 'src' folder and run 'main()'
+my-api = "resolution_week4_xrime.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/resolution_week4_xrime"]
